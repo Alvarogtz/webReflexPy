@@ -4,7 +4,7 @@ import { Event, getAllLocalStorageItems, getRefValue, getRefValues, isTrue, prev
 import { ColorModeContext, EventLoopContext, initialEvents, StateContext } from "/utils/context.js"
 import range from "/utils/helpers/range.js"
 import "focus-visible/dist/focus-visible"
-import { Box } from "@chakra-ui/react"
+import { Box, HStack, Image, Spacer, Text, VStack } from "@chakra-ui/react"
 import NextHead from "next/head"
 
 
@@ -36,7 +36,17 @@ export default function Component() {
 
   return (
     <Fragment>
-  <Box/>
+  <Box>
+  <VStack sx={{"bg": "#212529", "position": "sticky", "borderBottom": "0.025em solid #D3D3D3", "paddingX": ["2em"], "paddingY": "1em", "zIndex": "999", "top": "0", "width": "100%"}}>
+  <HStack sx={{"width": "100%"}}>
+  <Image alt={`Prueba de primera imagen`} src={`favicon.ico`} sx={{"width": ["4em"], "height": ["4em"]}}/>
+  <Text>
+  {`Mi primera web con Reflex !!`}
+</Text>
+  <Spacer/>
+</HStack>
+</VStack>
+</Box>
   <NextHead>
   <title>
   {`Mi primera Web con Reflex!!`}
